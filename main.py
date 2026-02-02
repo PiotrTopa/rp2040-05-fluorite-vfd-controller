@@ -124,6 +124,7 @@ def demo_brightness(vfd):
     # Fade out
     for b in range(40, 0, -1):
         vfd.set_brightness(b)
+        vfd.fill_rect(0, 30, 256, 8, 0)  # Clear text area
         vfd.center_text(f"Level: {b:3d}", 30)
         vfd.show()
         time.sleep_ms(50)
@@ -131,6 +132,7 @@ def demo_brightness(vfd):
     # Fade in
     for b in range(0, 41):
         vfd.set_brightness(b)
+        vfd.fill_rect(0, 30, 256, 8, 0)  # Clear text area
         vfd.center_text(f"Level: {b:3d}", 30)
         vfd.show()
         time.sleep_ms(50)

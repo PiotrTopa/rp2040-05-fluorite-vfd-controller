@@ -264,11 +264,11 @@ class GP1294AI:
         """
         Apply display trigger pattern to buffer.
         
-        The GP1294AI requires specific bytes to be set in the GRAM
+        The GP1294AI requires GRAM column 0, byte 0 to be set
         for display updates to be processed correctly.
+        Only column 0 is needed (not column 1), minimizing artifacts.
         """
         buffer[0 * self.GRAM_STRIDE + 0] = 0xFF
-        buffer[1 * self.GRAM_STRIDE + 0] = 0xFF
         return buffer
     
     def _apply_trigger_and_clear(self):

@@ -98,10 +98,9 @@ class VFDFramebuffer(framebuf.FrameBuffer):
     def _apply_trigger(self, buffer):
         """
         Apply display trigger pattern to GRAM buffer.
-        Required for the GP1294AI to process display updates.
+        Only GRAM column 0, byte 0 needed (minimizes visible artifact).
         """
         buffer[0 * self.GRAM_STRIDE + 0] = 0xFF
-        buffer[1 * self.GRAM_STRIDE + 0] = 0xFF
     
     def show(self):
         """
