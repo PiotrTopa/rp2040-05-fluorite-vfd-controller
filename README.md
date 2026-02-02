@@ -2,7 +2,13 @@
 
 MicroPython driver for 256x48 pixel VFD modules using the GP1294AI controller, designed for RP2040.
 
-![VFD Display](docs/display.jpg)
+[![Demo Video](https://img.youtube.com/vi/iuFLHGyt5UY/0.jpg)](https://youtu.be/iuFLHGyt5UY?si=IluFucB8iBytlPGr)
+
+## Gallery
+
+| Display Demo | Display Close-up | Wiring & PCB |
+|:---:|:---:|:---:|
+| ![Display Demo](docs/IMG_20260202_114257.jpg) | ![Display Close-up](docs/IMG_20260202_114324.jpg) | ![Wiring](docs/IMG_20260202_114340.jpg) |
 
 ## Features
 
